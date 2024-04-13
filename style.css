@@ -1,0 +1,276 @@
+
+/* -- VARS --  */
+
+  :root {
+    --theme-bold: 600;
+    --primary: #ffde00;
+    --secondary: #000;
+    --light-grey: #f5f5f5;
+  }
+
+/* -- BOOTSTRAP OVERRIDES --  */
+
+  .bg-primary,
+  .btn-primary { 
+    background-color: var(--primary) !important; 
+  }
+
+  .bg-light   { background-color: var(--light-grey) !important; }
+
+  .small { font-size: .75rem !important; }
+  
+  .btn-primary { 
+    color: #000;
+    border: none !important; 
+  }
+
+  .btn-primary:hover { 
+    color: ##fff;
+    background-color: var(--secondary) !important; 
+  }
+  
+
+/* -- COMPONENT OVERRIDES --  */
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    padding-bottom: 7px;
+    border-bottom: 3px solid var(--primary);
+    margin-bottom: 20px;
+  }  
+
+  h2 {
+    font-weight: lighter;
+  }
+
+  a{
+    color: #000;
+  }
+
+  button {
+    padding: 5px;
+    border: none;
+  }
+
+  input[type="text"]{
+    background-color: transparent;
+    border: none;
+    border-bottom: .25px solid rgba(0,0,0,.75);
+  }
+
+  input[type="text"]:focus-visible {
+    outline: none;
+  }
+
+/* -- INIT --  */
+
+  html,
+  body {
+    width: 100%;
+    min-width: 320px;
+  }
+
+  body { 
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+
+/* -- COMPONENTS & UTILITIES --  */
+
+  
+  .before-icon-arrow::before,
+  .before-icon-phone::before {
+      display: inline-block;
+  }
+
+  .before-icon-arrow::before {
+    content: url('assets/arrow-right-blk.svg');
+    width: 10px;
+    margin-right: 10px;
+
+  }
+
+  .before-icon-phone::before {
+    content: url('assets/phone-blk.svg');
+    width: 14px;
+    margin: 1px 5px 0 0;
+  }
+
+  .before-icon-phone:hover::before {
+    content: url('assets/phone-wht.svg');
+  }
+
+  .before-icon-arrow:hover::before,
+  .card-deck .card:hover p.cta.before-icon-arrow::before {
+    content: url('assets/arrow-right-wht.svg');
+  }
+
+
+/* -- HEADER --  */
+
+  header {
+    position: relative;
+    z-index: 1;
+  }
+
+  #header-logo{
+    width: calc(90px - 2rem);
+  }
+
+/* -- NAV --  */
+
+  .navbar-light .navbar-nav .nav-link{
+    color: #000;
+    font-weight: var(--theme-bold);
+  } 
+  
+  .navbar-light .nav-link.active::after {
+    content: ' ';
+    position: relative;
+    left: 2.5%;
+    display: block;
+    width: 95%;
+    border-top: 3px solid var(--primary);
+  }
+
+/* -- LOGIN --  */
+
+   #form-login > * {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+   }
+
+  #login-welcome span:nth-of-type(2){
+    font-size: 1.5rem;
+    font-weight: light;
+  }
+
+  #form-login label {
+    font-size: small;
+    font-weight: var(--theme-bold);
+  }
+
+/* -- BANNER --  */
+
+  #banner {
+    background-image: url('assets/intro-banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/* -- CATALOGUE --  */
+
+  .card-deck {
+    justify-content: center;
+  }
+
+  .card-deck .card {
+    min-width: 150px;
+    max-width: 350px;
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
+
+  .card-deck .card:hover {
+    background-color: var(--primary) !important;
+  }
+
+  .icon-cat {
+    width: 65px;
+    padding: 30px 0 40px;
+    margin: auto auto 0;
+  }
+
+ .card-deck .card:hover p.cta {
+    color: #fff;
+    background-color: #000 !important;
+  }
+
+/* -- ABOUT --  */
+
+ #about {
+  position: relative;
+  z-index: 1;
+ }
+
+  #about::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    background-color: var(--light-grey);
+    padding-top: 20%;
+    z-index: -1;
+  }
+
+  #about  > .container-md {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .wrapper-video {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+  .wrapper-video::before {
+    content: ' ';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    background-color: var(--primary);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+  }
+
+/* -- FOOTER --  */
+  
+  footer button.btn,
+  footer p {
+    font-size: .75rem;
+  }
+
+  #btn-contact {
+    margin-bottom: 10px;
+  }
+
+  #address {
+    font-weight: bold;
+  }
+
+  #legal a {
+    text-decoration: underline;
+  }
+
+/* -- MEDIA QUEIRES --  */
+
+  @media only screen and (max-width: 575px) {
+    /* BS4.6 XS/S Breakpoint ≥576px */
+
+    .card-deck .card {
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    /* BS4.6 MD Breakpoint ≥768px */
+
+    #banner {
+      /*height: 400px;*/
+      padding-top: 56.6%;
+    }
+
+  }

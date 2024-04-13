@@ -121,6 +121,7 @@
     width: calc(90px - 2rem);
   }
 
+
 /* -- NAV --  */
 
   .navbar-light .navbar-nav .nav-link{
@@ -135,6 +136,15 @@
     display: block;
     width: 95%;
     border-top: 3px solid var(--primary);
+  }
+  
+  .navbar-light .nav-link:not(.active):hover::after {
+    content: ' ';
+    position: relative;
+    left: 2.5%;
+    display: block;
+    width: 95%;
+    border-top: 3px solid var(--secondary);
   }
 
 /* -- LOGIN --  */

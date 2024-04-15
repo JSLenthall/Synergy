@@ -1,0 +1,11 @@
+// Post SCSS for the theme_synergylearning.
+
+footer div.theme_synergylearning.theme-footer-logo-wrapper img {
+	 max-height: calc(60px - (0.25rem* 2));
+	 margin-bottom: 10px;
+}
+
+footer p.theme_synergylearning.footer-copyright {
+    font-size: .7rem;
+	margin-bottom: 0px;
+}
